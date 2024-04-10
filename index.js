@@ -1,7 +1,7 @@
-import "dotenv/config.js";
-import { ScanStatus, WechatyBuilder, log } from "wechaty";
-import qrcodeTerminal from "qrcode-terminal";
-import express from 'express';
+require("dotenv/config.js");
+const { ScanStatus, WechatyBuilder, log } = require("wechaty");
+const qrcodeTerminal = require("qrcode-terminal") ;
+const express = require('express');
 
 let roomName = "机器人测试群";
 const botName = "[Bot]";
@@ -113,7 +113,7 @@ app.all("*", function (req, res, next) {
   res.header("Access-Control-Allow-Headers", "X-Requested-With, Content-Type");
   next();
 });
-app.get('/qrcode', (req, res) => {
+app.get('/', (req, res) => {
   res.send(qrcodeImageUrl)
 });
 

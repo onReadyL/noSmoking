@@ -3,13 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  "type": "module",
   "scripts": {
-    "build": "node index.js",
     "start": "node index.js"
   },
   "dependencies": {
-    "@vercel/node": "^3.0.26",
+    "@vercel/node": "^2.15.10",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "qrcode-terminal": "^0.12.0",
