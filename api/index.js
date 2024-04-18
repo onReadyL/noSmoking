@@ -1,4 +1,4 @@
-require("dotenv/config.js");
+require("dotenv").config();
 const { ScanStatus, WechatyBuilder, log } = require("wechaty");
 const qrcodeTerminal = require("qrcode-terminal") ;
 const express = require('express');
@@ -99,7 +99,9 @@ bot.on("logout", onLogout);
 
 bot
   .start()
-  .then(() => log.info("[机器人]", "启动成功"))
+  .then(() => {
+    log.info("[机器人]", "启动成功，ENTRYPOINT:%s", Object.keys(process.env))
+  })
   .catch((e) => log.error("[机器人]", e));
 
 const app = express();

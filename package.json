@@ -4,10 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node index.js"
+    "start": "node api/index.js"
   },
   "dependencies": {
-    "@vercel/node": "^2.15.10",
+    "@vercel/node": "^3.0.26",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "qrcode-terminal": "^0.12.0",
